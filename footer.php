@@ -16,7 +16,7 @@
                 ?>
 
                 <div class="footermenu">
-                <?php
+                    <?php
                 wp_nav_menu(
                     array(
                         'theme_location' => 'footermenu',
@@ -34,4 +34,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>

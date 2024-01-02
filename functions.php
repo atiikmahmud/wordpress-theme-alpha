@@ -98,4 +98,3 @@ function alpha_menu_item_class( $classes, $item ) {
 }
 
 add_filter( "nav_menu_css_class", "alpha_menu_item_class", 10, 2 );
-

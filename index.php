@@ -1,8 +1,9 @@
 <?php get_header(); ?>
+
 <body <?php body_class(); ?>>
-<?php get_template_part("hero"); ?>
-<div class="posts">
-    <?php
+    <?php get_template_part("hero"); ?>
+    <div class="posts">
+        <?php
     while ( have_posts() ) :
         the_post();
         ?>
@@ -18,7 +19,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <p>
-                            <strong><?php the_author(); ?></strong><br/>
+                            <strong><?php the_author(); ?></strong><br />
                             <?php echo get_the_date(); ?>
                         </p>
                         <?php echo get_the_tag_list( "<ul class=\"list-unstyled\"><li>", "</li><li>", "</li></ul>" ); ?>
@@ -48,23 +49,23 @@
                 </div>
             </div>
         </div>
-    <?php
+        <?php
     endwhile;
     ?>
 
-    <div class="container post-pagination">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-8">
-                <?php
+        <div class="container post-pagination">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <?php
                 the_posts_pagination( array(
                     "screen_reader_text" => ' ',
                     "prev_text"          => "New Posts",
                     "next_text"          => "Old Posts"
                 ) );
                 ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
